@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode Message</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    {% include 'sidebar.html' %}
+    <main class="content">
+        <section id="encode-page" class="encode-page">
+            <h1 class="title">Encode Message</h1>
+            <p class="encode-page-subtitle">Please fill all the details below. All fields are mandatory.</p>
+            <div class="encode-form-container">
+                <form action="/encode" method="post">
+                    <div class="input-group">
+                        <label for="receiver-email">Receiver's Email Id:</label>
+                        <input type="email" name="recipient_email" id="receiver-email" class="form-control" placeholder="Enter receiver's email id" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="select-image">Select Image:</label>
+                        <select name="select-image" class="form-control" required>
+                            <option value="" disabled selected>Select an image</option>
+                            {% for file in image_files %}
+                            <option value="{{ file }}">{{ file }}</option>
+                        {% endfor %}
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Your Message:</label>
+                        <textarea name="message" id="message" class="form-control" placeholder="Enter your message" rows="5" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Your Password:</label>
+                        <input type="text" id="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="key">Key:</label>
+                        <input name="key" type="text" id="key" class="form-control" placeholder="Enter key" required>
+                    </div>
+                    <button class="btn-primary full-width-btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inviso</p>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts/encode.js') }}"></script>
+</body>
+</html>

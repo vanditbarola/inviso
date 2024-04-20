@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+
+<body>
+    <a class="home_button" href="/">
+        <img src="static/images/back-button.png" alt="">
+    </a>
+    <div class="heading">
+        Sign Up to Inviso
+    </div>
+    <div class="signup-container">
+        <form id="signup-form" action="/signup" method="post">
+            <div id="frame1" class="frame">
+                <div class="input-group-flex">
+                    <p>Name</p>
+                    <input name="name" type="text" class="form-control" placeholder="Type your name" aria-label="Type your name">
+                </div>
+                <div class="input-group-flex">
+                    <p>DOB</p>
+                    <input name="DOB" type="date" class="form-control" aria-label="Enter your date of birth">
+                </div>
+                <p>Mobile No.</p>
+                <div class="input-group-flex">
+                    <input name="MobileNo" type="tel" class="form-control" placeholder="Enter your mobile number" aria-label="Enter your mobile number">
+                </div>
+                <!-- OTP Form -->
+                <div class="input-group">
+                    <p>Email Id</p>
+                    <input id="email" name="email" type="email" class="form-control" placeholder="Type your email id" aria-label="Type your email id">
+                </div>
+                <div class="input-group-flex">
+                    <input name="password" type="password" class="form-control" placeholder="Type your password" aria-label="Password">
+                    <button id="send-otp" type="button" class="btn-primary" onclick="sendOTP()">Send OTP</button>
+                </div>
+                <div class="input-group-flex">
+                    <input id="otp" name="OTP" type="text" class="form-control" placeholder="OTP sent to your registered email" aria-label="OTP">
+                    <button id="verify-otp" type="button" class="btn-primary" onclick="verifyOTP()">Verify OTP</button>
+                </div>
+                <p id="error-message" class="error-message"></p>
+
+                <button id="continue-btn" class="btn-primary2 full-width-btn" onclick="showFrame(2)" disabled>Continue</button>
+                <p class="signup-text"> <a href="/login" class="signup-link">Already an existing user? Login to your account</a></p>
+            </div>
+                <!-- Second set of form fields -->
+            <div id="frame2" class="frame" style="display: none;">
+                <p>Aadhar Card No.</p>
+                <div class="input-group-flex">
+                    <input name="aadhar" type="text" class="form-control" placeholder="Type your Aadhar Card No." aria-label="Aadhar Card No.">
+                </div>
+                <div class="input-group">
+                    <p>Pan No.</p>
+                    <input name="pan" type="text" class="form-control" placeholder="Type your PAN card no." aria-label="PAN">
+                </div>
+                <div class="input-group">
+                    <p>GST No.</p>
+                    <input name="gst" type="text" class="form-control" placeholder="Type your GST no." aria-label="PAN">
+                    <textarea id="message" name="message" class="form-control" placeholder="Enter your message" rows="5" required></textarea>
+                </div>
+                <button class="btn-primary full-width-btn" type="submit">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+    <script src="static/scripts/signup.js"></script>
+</body>
+
+</html>

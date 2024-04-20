@@ -1,0 +1,9 @@
+Flask
+Gunicorn
+flask_pymongo
+flask_mail
+pillow
+pymongo
+Crypto
+pycryptodome
+numpy

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decode Message</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    {% include 'sidebar.html' %}
+    <main class="content">
+        <section id="decode-page" class="decode-page">
+           
+            <h1 class="title">Decode Message</h1>
+        <p class="encode-page-subtitle">Please fill all the details below. All fields are mandatory.</p>
+      
+        <form action="/decode" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="action" id="action" value="decode">
+            <div class="encode-form-container">
+                <div class="input-group">
+                    <label for="sender-email">Sender's Email Id:</label>
+                    <input type="email" id="sender-email" name="sender-email" class="form-control" placeholder="Enter sender's email id" required>
+                </div>
+        
+                <div class="input-group">
+                    <label for="select-image">Select Image:</label>
+                    <input type="file" id="select-image" name="select-image" class="form-control" accept="image/*" required>
+                </div>
+        
+                <div class="input-group">
+                    <label for="key">Key:</label>
+                    <input type="text" id="key" name="key" class="form-control" placeholder="Enter key" required>
+                </div>
+        
+                <button type="submit" class="btn-secondary full-width-btn-2">Submit</button>
+        
+                <div class="input-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Enter your message" rows="5">{{ decoded_message if decoded_message else message }}</textarea>
+                </div>
+        
+                <button class="btn-secondary full-width-btn-2">Download txt file</button>
+            </div>
+        </form>
+        
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inviso</p>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts/decode.js') }}"></script>
+</body>
+</html>
+

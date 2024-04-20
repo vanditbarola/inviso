@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Raleway", sans-serif;
+}
+
+/* Colors */
+:root {
+    --color-default: #2b180d;
+    --color-primary: #56b8e6;
+    --color-primary-darker: #4696bc;
+    --color-secondary: #142333;
+    --color-mid-opacity: #142333b9;
+    --color-low-opacity: #14233300;
+    --color-background: #0E1825;
+    width: max-content;
+    height: max-content;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    background-color: var(--color_background);
+}
+
+.sidebar {
+    width: 450px;
+    height: 90%;
+    background-color: var(--color-secondary);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.sidebar-header div{
+    flex: 1;
+    width: 50%;
+}
+
+.heading{
+    margin-top: 10px;
+    flex: 1;
+    width: 50%;
+    padding: 0px 20px;
+    font-size: 30px;
+    opacity: 1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.greeting{
+    text-align: right;
+    margin-top: 16px;
+    flex: 1;
+    width: 50%;
+    padding: 0px 20px;
+    font-size: 17px;
+    opacity: 1;
+    font-family: "Montserrat", sans-serif;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 20px 30px;
+    width: 100%;
+    transition: color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.sidebar li:hover {
+    background-color: var(--color-primary-darker);
+}
+
+.content {
+    background-color: var(--color-background);
+    margin-left: 450px;
+    width: 67.5vw;
+    height: 80vh;
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.main-page h1{
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.encode-page h1{
+    margin: 5px 10px;
+    color: #fff;
+    font: var(--font-primary);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.decode-page h1{
+    margin: 5px 10px;
+    color: #fff;
+    font: var(--font-primary);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.encode-page-subtitle{
+    color: #FFFFFF;
+    font: var(--font-secondary);
+    font-size: 13px;
+    margin: 5px 10px;
+    padding: 0;
+}
+
+.encode-form-container{
+    background: var(--color-secondary);
+    margin: 30px 10px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    font: var(--font-primary);
+}
+
+.input-group label {
+    flex: 1;
+    color: #FFFFFF;
+    margin-bottom: 7px;
+    font-family: var(--font-primary);
+    font-weight: 100px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.form-control {
+    flex: 4;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    height: 10px;
+    font-size: 18px;
+    background-color: var(--color-background);
+    mix-blend-mode: screen;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    -moz-appearance: none;
+    appearance: none;
+    border-width: 0;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 5px 10px 5px 5px;
+    border-radius: 10px;
+    height: 30px;
+    border: none;
+    color: #ffffff47;
+    font-family: var(--font-primary);
+    font-weight: 100px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.input-group textarea {
+    flex: 4;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    height: 150px;
+    font-size: 18px;
+    background-color: var(--color-background);
+    mix-blend-mode: screen;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    -moz-appearance: none;
+    appearance: none;
+    border-width: 0;
+}
+
+.form-control::placeholder {
+    color: #FFFFFF;
+    font-family: var(--font-primary);
+    font-weight: 100px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    opacity: 0.3;
+}
+
+.btn-primary, .btn-secondary {
+    flex: 1;
+    background-color: #56B8E6;
+    color: #FFFFFF;
+    width: 100%;
+    height: 30px;
+    padding: 10px; /* Set your desired button color */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    line-height: 0px;
+}
+
+.btn-secondary{
+    margin-top: 0;
+}
+
+button:hover {
+    background-color: #15406e; /* Set your desired button hover color */
+}
+
+
+.full-width-btn{
+    margin: 10px;
+    width: 100%;
+}
+
+.full-width-btn-2{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+#logout-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #018E52;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logout-btn:hover {
+    background-color: lightblue;
+}
+
+/* PURCHASE PAGE */
+
+
+  
+.purchase-heading {
+    margin-top: 10px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+  
+  .subheading {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    padding: 0 20vw;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+  
+  .plans {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .plan {
+    flex: 1;
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    height: 280px;
+  }
+  
+  .plan-name {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }
+  
+  .plan-price {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .plan-details {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 0px 0px 0px;
+  }
+  
+  .price-per-image {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin: 2px 0px;
+  }
+  
+  .purchase-button {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    border: none;
+    padding: 0px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    width: 70%;
+    height: 30px;
+    top: 0px;
+  }
+  
+  .purchase-button:hover {
+    background-color: var(--color-primary-darker);
+  }
+  
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    height: 7%;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    z-index: 6;
+  }
+  

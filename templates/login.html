@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
+    <a class="home_button" href="/">
+        <img src="static/images/back-button.png" alt="">
+    </a>
+    <div class="heading">
+        Login to Inviso
+    </div>
+    <div class="login-container">
+        <div class="form-box">
+            <form id="login-form" action="/login" method="post">
+                <p>Email Id</p>
+                <div class="input-group-flex">
+                    <input id="email" name = "email" type="text" class="form-control" placeholder="Type your email id" aria-label="Type your email id">
+                    <button class="btn-primary" type="button" onclick="sendOTP()">Send OTP</button>
+                </div>
+                
+                <div class="input-group-flex">
+                    <input id="otp" name = "OTP" type="text" class="form-control" placeholder="Type OTP sent to your email" aria-label="Type OTP">
+                    <button class="btn-primary" type="button" onclick="verifyOTP()">Verify OTP</button>
+                </div>
+                <p id="error-message" class="error-message"></p>
+                
+                <div class="input-group">
+                    <p>Mobile No.</p>
+                    <input name = "mobile" type="text" class="form-control" placeholder="Type your mobile no." aria-label="Mobile">
+                    <p>Password</p>
+                    <input name = "password" type="password" class="form-control" placeholder="Type your password" aria-label="Password">
+                </div>
+                
+                <p>Aadhar Card No.</p>
+                <div class="input-group-flex">
+                    <input name = "aadhar" type="text" class="form-control" placeholder="Type your Aadhar Card No." aria-label="Aadhar Card No.">
+                </div>
+                
+                
+                <button id="continue-btn" type="submit" class="btn-primary2 full-width-btn" disabled>Login</button>
+                
+                <p class="signup-text"> <a href="/signup" class="signup-link">New to Inviso? Create a new account</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="static/scripts/signup.js"></script>
+</body>
+</html>
+ 

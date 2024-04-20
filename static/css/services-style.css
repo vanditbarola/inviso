@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Raleway", sans-serif;
+}
+
+/* Colors */
+:root {
+    --color-default: #2b180d;
+    --color-primary: #56b8e6;
+    --color-primary-darker: #4696bc;
+    --color-secondary: #142333;
+    --color-mid-opacity: #142333b9;
+    --color-low-opacity: #14233300;
+    --color-background: #0E1825;
+    width: max-content;
+    
+}
+
+
+body {
+    margin: 0;
+    font-family: var(--font-default);
+    background-color: var(--color-secondary);
+}
+
+/* HEADER CSS */
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-low-opacity);
+    height: 70px;
+    width: 97.8vw;
+    color: #ffffff;
+    padding: 15px;
+    padding-top: 10px;
+    transition: background-color 0.3s, height 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+  }
+  
+  header div h1 {
+    padding: 0px 20px;
+    margin-left: 40px;
+    opacity: 1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    
+  }
+  
+  header.visible {
+    background-color: var(--color-mid-opacity);
+    height: 40px;
+  }
+  
+  nav {
+    display: flex;
+    margin-right: 45px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    margin-right: 20px;
+    padding: 0px 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.service{
+  font-weight: 600;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  height: 550px;
+  width: 100vw; /* Rest of the screen */
+  display: inline;
+  z-index: -1; /* Ensure background is behind header */
+}
+
+.background-image img{
+  left: 0%;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;
+  background-size: fill;
+  background-position: top;
+
+  filter: brightness(70%) opacity(80%);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFFFFF; /* Default color for text */
+}
+
+.overlay-text h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.overlay-text p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.overlay-text a {
+  text-decoration: none;
+}
+
+
+.main {
+    margin-top: 100vh;
+    color: var(--color-background);
+    height: 1350px;
+    left: 0px;
+    width: 100vw;
+    background-color: var(--color-background);
+    opacity: 1;
+    z-index: 2;
+}
+
+.services{
+    width: 100vw;
+}
+  
+.services img{
+width: 100%;
+object-fit: cover; 
+}
+
+.main-container {
+    background-color: var(--color-secondary);
+    margin: 40px;
+    height: 101vh;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.box {
+    width: 45vw;
+    background-color: #20364E;
+    box-sizing: border-box;
+    display: flex;
+    height: 300px;
+    margin: 20px;
+    padding: 0;
+    border: solid 1px black;
+
+}
+
+.box img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.text {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px 50px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+
+.contact-section {
+    background-color: #E3E9EC;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+  }
+  
+  .contact-column {
+    margin-left: 90px;
+    width: calc(33.33% - 20px);
+    margin-right: 0px;
+  }
+  
+  .contact-column h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 27px;
+    color: var(--color-background);
+    margin-bottom: 10px;
+  }
+  
+  .contact-column p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    color: var(--color-background);
+  }
+  
+  .para{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-column ul {
+    color: var(--color-background);
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-column ul li {
+    margin-bottom: 0px;
+  }
+  
+  .contact-column ul li a {
+    text-decoration: none;
+    color: #1b2f45;
+  }
+  
+  /* FOOTER CSS */
+  
+  footer {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #fff;
+    z-index: 6;
+  }
+  
+  
+  
+  

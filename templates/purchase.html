@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode Page</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+  {% include 'sidebar.html' %}
+    <main class="content">
+        <section id="main-page" class="main-page">
+            <h1>Welcome to Inviso</h1>
+        </section>
+<section id="purchase-page" class="purchase-page">
+    <div class="purchase-plans">
+        <h1 class="purchase-heading">Purchase Plans</h1>
+        <h2 class="subheading">Choose your plan according to your needs. We offer plans by the number of images generated</h2>
+        <div class="plans">
+          <div class="plan">
+            <h3 class="plan-name">Bronze Plan</h3>
+            <p class="plan-price">$5.99</p>
+            <p class="plan-details">No. of images: 1</p>
+            <p class="price-per-image">$5.99/image</p>
+            <button class="purchase-button">Purchase</button>
+          </div>
+          <div class="plan">
+            <h3 class="plan-name">Silver Plan</h3>
+            <p class="plan-price">$26.99</p>
+            <p class="plan-details">No. of images: 5</p>
+            <p class="price-per-image">$5.39/image</p>
+            <button class="purchase-button">Purchase</button>
+          </div>
+          <div class="plan">
+            <h3 class="plan-name">Gold Plan</h3>
+            <p class="plan-price">$54.99</p>
+            <p class="plan-details">No. of images: 11</p>
+            <p class="price-per-image">$4.99/image</p>
+            <button class="purchase-button">Purchase</button>
+          </div>
+        </div>
+      </div>
+    
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Inviso</p>
+</footer>
+
+<script src="static/scripts/purchase.js"></script>
+</body>
+
+</html>
